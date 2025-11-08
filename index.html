@@ -11,3 +11,826 @@
 	</section>
   </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YOUR NAME | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of YOUR NAME, Computer Science graduate from Sussex University.">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius-lg: 1.25rem;
+      --radius-md: 0.75rem;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.6);
+      --shadow-subtle: 0 10px 25px rgba(15, 23, 42, 0.8);
+      --transition-fast: 150ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 4rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      margin-bottom: 2.5rem;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(18px);
+      position: sticky;
+      top: 0.75rem;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: conic-gradient(from 140deg, #38bdf8, #6366f1, #22c55e, #38bdf8);
+      padding: 1px;
+    }
+
+    .logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: radial-gradient(circle at 20% 0, #1f2937, #020617 60%, #000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .logo-text-primary {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .logo-text-secondary {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    nav a {
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--muted);
+      text-decoration: none;
+      transition: background var(--transition-fast), color var(--transition-fast), border var(--transition-fast), transform 120ms ease-out;
+    }
+
+    nav a:hover {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.4);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      border-color: rgba(148, 163, 184, 0.5);
+      background: linear-gradient(to bottom right, rgba(56, 189, 248, 0.09), rgba(56, 189, 248, 0.03));
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding-right: 0.95rem;
+    }
+
+    .nav-cta span.icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      font-size: 0.7rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
+      gap: 2.25rem;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        border-radius: 1rem;
+      }
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+      nav {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+
+    .card {
+      background: radial-gradient(circle at 0 0, #111827 0, #020617 55%, #000 100%);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.20);
+      box-shadow: var(--shadow-soft);
+      padding: 1.8rem 1.65rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -120px;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.08), transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(129, 140, 248, 0.12), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(12px);
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
+    }
+
+    .pill-badge {
+      border-color: rgba(56, 189, 248, 0.5);
+      color: #e0f2fe;
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.18), rgba(15, 23, 42, 0.95));
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 2.7rem);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight {
+      background: linear-gradient(to right, #38bdf8, #22c55e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.6rem;
+    }
+
+    .meta-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      margin-bottom: 0.15rem;
+    }
+
+    .meta-value {
+      color: #e5e7eb;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.70rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-subtle);
+      transition: transform 120ms ease-out, box-shadow 120ms ease-out, background var(--transition-fast), border var(--transition-fast);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.9);
+      background: #020617;
+      border-color: rgba(148, 163, 184, 0.9);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #38bdf8, #22c55e);
+      border-color: transparent;
+      color: #0b1220;
+      box-shadow: 0 22px 50px rgba(8, 47, 73, 0.9);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(to right, #0ea5e9, #16a34a);
+      box-shadow: 0 24px 55px rgba(15, 23, 42, 1);
+    }
+
+    .btn-icon {
+      font-size: 0.9rem;
+    }
+
+    .secondary-text {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .secondary-text strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .section {
+      margin-bottom: 1.6rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.9rem;
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+    }
+
+    .section-subtitle {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .skill-card {
+      padding: 0.75rem 0.85rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      background: radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.95), #020617 60%);
+      font-size: 0.85rem;
+    }
+
+    .skill-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 0.2rem;
+    }
+
+    .skill-list {
+      font-size: 0.86rem;
+      color: #e5e7eb;
+    }
+
+    .skill-list span + span::before {
+      content: "•";
+      margin: 0 0.4rem;
+      color: #4b5563;
+    }
+
+    .list {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .item {
+      padding: 0.85rem 0.9rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      background: radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.95), #020617 65%);
+      font-size: 0.87rem;
+    }
+
+    .item-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.25rem;
+      gap: 0.75rem;
+    }
+
+    .item-title {
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .item-meta {
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+
+    .item-tags {
+      margin-top: 0.45rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      font-size: 0.76rem;
+    }
+
+    .tag {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.9);
+      color: #9ca3af;
+    }
+
+    .item-description {
+      color: #d1d5db;
+      font-size: 0.84rem;
+    }
+
+    .item-links {
+      margin-top: 0.45rem;
+      font-size: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      margin-top: 0.2rem;
+    }
+
+    .chip {
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.9);
+      color: #9ca3af;
+    }
+
+    .contact-card {
+      margin-top: 1.2rem;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius-md);
+      border: 1px dashed rgba(55, 65, 81, 0.9);
+      background: radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.9), #020617 70%);
+      font-size: 0.86rem;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .contact-row a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.84rem;
+    }
+
+    .contact-label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .contact-value {
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      font-size: 0.78rem;
+      color: #6b7280;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">
+        <div class="logo-mark">
+          <div class="logo-inner">Y</div>
+        </div>
+        <div class="logo-text">
+          <span class="logo-text-primary">YOUR NAME</span>
+          <span class="logo-text-secondary">Computer Science · Portfolio</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="nav-cta">
+          <span class="icon">✉</span>
+          <span>Contact</span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Left column: Hero + projects -->
+      <section>
+        <article class="card" id="about">
+          <div class="card-inner">
+            <div class="pill-row">
+              <div class="pill">
+                <span class="pill-dot"></span>
+                <span>Open to roles</span>
+              </div>
+              <div class="pill pill-badge">
+                <span>Computer Science · Sussex</span>
+              </div>
+            </div>
+
+            <h1>
+              <span class="highlight">YOUR NAME</span>
+            </h1>
+            <p class="subtitle">
+              YOUR ONE-LINE TAGLINE. Example:
+              <strong>Computer Science graduate focused on building practical software projects and improving technical skills.</strong>
+            </p>
+
+            <div class="meta-row">
+              <div>
+                <div class="meta-label">Focus</div>
+                <div class="meta-value">Junior software roles · Tech internships · Customer-facing work</div>
+              </div>
+              <div>
+                <div class="meta-label">Location</div>
+                <div class="meta-value">YOUR CITY, UK</div>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a href="YOUR_CV_LINK.pdf" class="btn btn-primary">
+                <span class="btn-icon">⬇</span>
+                <span>Download CV</span>
+              </a>
+              <a href="#projects" class="btn">
+                <span class="btn-icon">★</span>
+                <span>View projects</span>
+              </a>
+            </div>
+
+            <p class="secondary-text">
+              I recently completed <strong>BSc / MSc Computer Science at the University of Sussex</strong>. I am currently looking for
+              <strong>entry-level roles</strong> where I can apply  skills learned from my expreince at sussex 
+            </p>
+          </div>
+        </article>
+
+        <article class="card" id="projects" style="margin-top: 1.5rem;">
+          <div class="card-inner">
+            <div class="section-header">
+              <div>
+                <div class="section-title">Projects</div>
+                <div class="section-subtitle">Selected academic and personal work</div>
+              </div>
+            </div>
+
+            <div class="list">
+              <!-- Project 1 -->
+              <div class="item">
+                <div class="item-header">
+                  <div class="item-title">PROJECT ONE TITLE</div>
+                  <div class="item-meta">YEAR · Individual / Group</div>
+                </div>
+                <p class="item-description">
+                  Short description of what this project does, what problem it solves, and what you personally implemented.
+                </p>
+                <div class="item-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Flask</span>
+                  <span class="tag">SQL</span>
+                </div>
+                <div class="item-links">
+                  <a href="https://github.com/USERNAME/REPO" target="_blank">GitHub repository →</a>
+                  <a href="#" target="_blank">Live demo / Video →</a>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="item">
+                <div class="item-header">
+                  <div class="item-title">PROJECT TWO TITLE</div>
+                  <div class="item-meta">YEAR · Individual / Group</div>
+                </div>
+                <p class="item-description">
+                  Short description. Focus on your contribution and any measurable result or feature you are proud of.
+                </p>
+                <div class="item-tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                </div>
+                <div class="item-links">
+                  <a href="https://github.com/USERNAME/REPO" target="_blank">GitHub repository →</a>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="item">
+                <div class="item-header">
+                  <div class="item-title">PROJECT THREE TITLE</div>
+                  <div class="item-meta">YEAR · Dissertation / Major Project</div>
+                </div>
+                <p class="item-description">
+                  Concise summary of your final-year or postgraduate project. State the goal, tools used, and the final outcome.
+                </p>
+                <div class="item-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Machine Learning</span>
+                  <span class="tag">Pandas</span>
+                </div>
+                <div class="item-links">
+                  <a href="LINK_TO_REPORT_OR_VIDEO" target="_blank">Project report / video →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Right column: Skills, experience, contact -->
+      <section>
+        <article class="card" id="skills">
+          <div class="card-inner">
+            <div class="section-header">
+              <div>
+                <div class="section-title">Skills</div>
+                <div class="section-subtitle">Technical and interpersonal</div>
+              </div>
+            </div>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-title">Programming</div>
+                <div class="skill-list">
+                  <span>Python</span>
+                  <span>Java</span>
+                  <span>Basic JavaScript</span>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-title">Web & Data</div>
+                <div class="skill-list">
+                  <span>HTML / CSS</span>
+                  <span>SQL</span>
+                  <span>APIs</span>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-title">Tools</div>
+                <div class="skill-list">
+                  <span>Git</span>
+                  <span>VS Code</span>
+                  <span>Linux basics</span>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-title">People & Work</div>
+                <div class="skill-list">
+                  <span>Customer service</span>
+                  <span>Teamwork</span>
+                  <span>Reliable & punctual</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" id="experience" style="margin-top: 1.2rem;">
+          <div class="card-inner">
+            <div class="section-header">
+              <div>
+                <div class="section-title">Experience</div>
+                <div class="section-subtitle">Work and volunteering</div>
+              </div>
+            </div>
+
+            <div class="list">
+              <!-- Role 1 -->
+              <div class="item">
+                <div class="item-header">
+                  <div class="item-title">ROLE TITLE · ORGANISATION</div>
+                  <div class="item-meta">MM/YYYY – MM/YYYY · LOCATION</div>
+                </div>
+                <p class="item-description">
+                  • Bullet 1 focusing on customer interaction or responsibility<br>
+                  • Bullet 2 with a small measurable or concrete task<br>
+                  • Bullet 3 about teamwork or reliability
+                </p>
+                <div class="chip-row">
+                  <span class="chip">Customer service</span>
+                  <span class="chip">Teamwork</span>
+                  <span class="chip">Time management</span>
+                </div>
+              </div>
+
+              <!-- Role 2 -->
+              <div class="item">
+                <div class="item-header">
+                  <div class="item-title">STUDENT / UNI-RELATED ROLE</div>
+                  <div class="item-meta">MM/YYYY – MM/YYYY</div>
+                </div>
+                <p class="item-description">
+                  Describe any part-time, society, or project responsibility that shows commitment and communication.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" id="contact" style="margin-top: 1.2rem;">
+          <div class="card-inner">
+            <div class="section-header">
+              <div>
+                <div class="section-title">Contact</div>
+                <div class="section-subtitle">Interested in roles or collaborations</div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">
+                <a href="mailto:YOUR.EMAIL@EXAMPLE.COM">YOUR.EMAIL@EXAMPLE.COM</a>
+              </div>
+
+              <div class="contact-row">
+                <div>
+                  <div class="contact-label">LinkedIn</div>
+                  <div class="contact-value">
+                    <a href="https://www.linkedin.com/in/YOUR-LINK" target="_blank">
+                      linkedin.com/in/YOUR-LINK →
+                    </a>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="contact-label">GitHub</div>
+                  <div class="contact-value">
+                    <a href="https://github.com/YOUR-USERNAME" target="_blank">
+                      github.com/YOUR-USERNAME →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <p style="margin-top: 0.7rem; font-size: 0.8rem; color: #9ca3af;">
+                I am open to entry-level software roles, internships, and customer-facing work where I can keep improving technically while contributing to the team.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> YOUR NAME</span>
+      <span>Built with HTML &amp; CSS</span>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
