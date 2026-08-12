@@ -1,9 +1,51 @@
-* {
-    box-sizing: border-box;
+*{box-sizing : border-box}
+
+html{ scroll-behavior:smooth;}
+
+
+body{margin: 0 ;
+font-family :arai, sans-serif;
+color: #981818;
+line-height: 1.6;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.profile-image  {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+#Home {display: flex;
+        align-items: center;
+    gap :2rem}
+
+    main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: flex;
+    gap: 2rem;
 }
