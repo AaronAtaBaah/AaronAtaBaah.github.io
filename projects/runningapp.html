@@ -12,6 +12,7 @@
 
 </head>
 
+
 <body>
 
     <header>
@@ -23,8 +24,15 @@
             </a>
 
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="../index.html#projects">Projects</a>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
             </div>
 
         </nav>
@@ -36,9 +44,14 @@
 
         <article class="project-page">
 
+
+            <!-- PROJECT HEADER -->
+
             <header class="project-header">
 
-                <h1>Accessible Running Application</h1>
+                <h1>
+                    Accessible Running Application
+                </h1>
 
                 <p>
                     A React Native running application designed
@@ -54,116 +67,469 @@
             </header>
 
 
+
+            <!-- OVERVIEW -->
+
             <section>
 
                 <h2>Overview</h2>
 
                 <p>
-                   The Accessible Running Application is a mobile running app designed to help users maintain their target 
-                   pace and navigate their run without constantly relying on their phone's screen. 
-                   The application provides real-time audio feedback based on the runner's pace, with haptic feedback explored as an additional form of feedback. Users can also configure their running preferences and save previous runs for later review.
+                    The Accessible Running Application is a mobile
+                    running app designed to help users maintain
+                    their target pace and navigate their run
+                    without constantly relying on their phone's
+                    screen.
+
+                    The application provides real-time audio
+                    feedback based on the runner's pace, with
+                    haptic feedback explored as an additional
+                    form of feedback.
+
+                    Users can also configure their running
+                    preferences and save previous runs for
+                    later review.
                 </p>
 
             </section>
 
+
+
+            <!-- THE PROBLEM -->
 
             <section>
 
                 <h2>The Problem</h2>
 
                 <p>
-                       I discovered  current running appliaactions mainly focused on the visual aspect of a running 
-                    application. I reasoned that when you are running it is inconvenient and distracting to keep glacing at your phone 
-                    so i set out to find away to keep track of your runn whilst running.
+                    I discovered that current running applications
+                    mainly focused on the visual aspect of a
+                    running application.
+
+                    I reasoned that when you are running, it can
+                    be inconvenient and distracting to keep
+                    glancing at your phone.
+
+                    I therefore set out to explore whether a
+                    running application could provide useful
+                    information while reducing the need to
+                    interact with the screen.
                 </p>
 
             </section>
 
 
-<section id="research">
 
-    <h2>Research & Problem Discovery</h2>
+            <!-- RESEARCH -->
 
-    <p class="section-intro">
-        I started with a simple question: could I make a
-        running app that helps users maintain their pace
-        without constantly looking at their phone?
-    </p>
+            <section id="research">
 
-    <div class="research-steps">
+                <h2>Research &amp; Problem Discovery</h2>
 
-        <article class="research-step">
-            <span class="step-number">01</span>
-            <h3>Existing Running Apps</h3>
-            <p>
-                I reviewed existing running applications and
-                found that audio feedback was already being
-                used to provide pace information.
-            </p>
-        </article>
+                <p class="section-intro">
 
-        <article class="research-step">
-            <span class="step-number">02</span>
-            <h3>Identifying the Gap</h3>
-            <p>
-                I wanted to explore greater control over how
-                and when feedback was delivered.
-            </p>
-        </article>
+                    I started with a simple question:
 
-        <article class="research-step">
-            <span class="step-number">03</span>
-            <h3>Exploring Feedback</h3>
-            <p>
-                I explored speech, audio cues, rhythmic
-                feedback and haptic feedback.
-            </p>
-        </article>
+                    could I make a running app that helps users
+                    maintain their pace without constantly
+                    looking at their phone?
 
-        <article class="research-step">
-            <span class="step-number">04</span>
-            <h3>Design Direction</h3>
-            <p>
-                This led to the goal of giving users greater
-                control over the type, frequency and conditions
-                of the feedback they receive.
-            </p>
-        </article>
-
-    </div>
-
-</section>
-
-
-            <section>
-
-                <h2>Design Decisions</h2>
-
-                <h3>Decision goals</h3>
-
-                <p>
-                    Explain what you decided and why.
                 </p>
 
-                <h3>Design procces 2</h3>
 
-                <p>
-                    Explain what you decided and why.
-                </p>
-                                <h3>Design procces 2</h3>
+                <div class="research-steps">
 
-                <p>
-                    Explain what you decided and why.
-                </p>
 
+                    <article class="research-step">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Existing Running Apps
+                        </h3>
+
+                        <p>
+                            I reviewed existing running
+                            applications and found that
+                            audio feedback was already being
+                            used to provide pace information.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-step">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Identifying the Gap
+                        </h3>
+
+                        <p>
+                            I wanted to explore greater
+                            control over how and when
+                            feedback was delivered.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-step">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Exploring Feedback
+                        </h3>
+
+                        <p>
+                            I explored speech, audio cues,
+                            rhythmic feedback and haptic
+                            feedback.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-step">
+
+                        <span class="step-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Design Direction
+                        </h3>
+
+                        <p>
+                            This led to the goal of giving
+                            users greater control over the
+                            type, frequency and conditions
+                            of the feedback they receive.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- DESIGN -->
+
+            <section id="design">
+
+                <h2>Design</h2>
+
+
+                <!-- DESIGN GOALS -->
+
+                <div class="design-subsection">
+
+                    <h3>Design Goals</h3>
+
+                    <p>
+                        The design of the application was
+                        informed by two main sources: user
+                        research and usability evaluation
+                        using Nielsen's 10 usability
+                        heuristics.
+                    </p>
+
+                    <p>
+                        Before development, I collected
+                        feedback from runners and general
+                        users to understand their experiences
+                        with existing fitness applications
+                        and identify the features they wanted
+                        from a running application.
+
+                        I focused particularly on how users
+                        interacted with fitness applications
+                        while running, the usefulness of
+                        audio feedback, and accessibility.
+                    </p>
+
+                    <p>
+                        This feedback was combined with
+                        Nielsen's 10 usability heuristics
+                        to guide the design and refinement
+                        of the interface.
+                    </p>
+
+
+                    <h4>
+                        Core Design Goals
+                    </h4>
+
+
+                    <div class="design-goals-grid">
+
+
+                        <article class="design-goal">
+
+                            <h4>
+                                Reduce Screen Dependence
+                            </h4>
+
+                            <p>
+                                Minimise the amount of visual
+                                interaction required while
+                                running by communicating
+                                important information through
+                                audio feedback.
+                            </p>
+
+                        </article>
+
+
+                        <article class="design-goal">
+
+                            <h4>
+                                Customisable Feedback
+                            </h4>
+
+                            <p>
+                                Give users greater control
+                                over the type and frequency
+                                of feedback they receive
+                                during a run.
+                            </p>
+
+                        </article>
+
+
+                        <article class="design-goal">
+
+                            <h4>
+                                Simple Interface
+                            </h4>
+
+                            <p>
+                                Keep the interface clear and
+                                easy to understand, particularly
+                                when users are interacting with
+                                the application while running.
+                            </p>
+
+                        </article>
+
+
+                        <article class="design-goal">
+
+                            <h4>
+                                Real-Time Feedback
+                            </h4>
+
+                            <p>
+                                Provide pace information quickly
+                                enough for the runner to make
+                                adjustments during their run.
+                            </p>
+
+                        </article>
+
+
+                        <article class="design-goal">
+
+                            <h4>
+                                User Control
+                            </h4>
+
+                            <p>
+                                Allow runners to configure their
+                                running goals and feedback
+                                preferences rather than relying
+                                on a fixed feedback system.
+                            </p>
+
+                        </article>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INITIAL PROTOTYPE -->
+
+                <div class="design-subsection">
+
+                    <h3>
+                        Initial Prototype
+                    </h3>
+
+                    <p>
+                        These design goals provided the
+                        foundation for my initial Figma
+                        prototype.
+
+                        I used the prototype to establish
+                        the application's navigation,
+                        screen structure and core running
+                        workflow before beginning development.
+                    </p>
+
+
+                    <figure class="prototype-image">
+
+                        <img
+                            src="AaronAtaBaah.github.io\assets\images\running_app_portfolio_images\final-app\version 1 appliaction.jpg"
+                            alt="Initial Figma prototype for the running application"
+                        >
+
+                        <figcaption>
+                            Initial Figma prototype
+                        </figcaption>
+
+                    </figure>
+
+
+                    <p>
+                        The initial design focused on keeping
+                        the interface simple and reducing the
+                        amount of information presented to
+                        the runner at one time.
+                    </p>
+
+                </div>
+
+
+
+                <!-- DESIGN EVALUATION -->
+
+                <div class="design-subsection">
+
+                    <h3>
+                        Design Evaluation
+                    </h3>
+
+                    <p>
+                        The initial prototype was evaluated
+                        using feedback from users alongside
+                        Nielsen's 10 usability heuristics.
+                    </p>
+
+
+                    <div class="evaluation-grid">
+
+
+                        <article class="evaluation-card">
+
+                            <h4>
+                                User Feedback
+                            </h4>
+
+                            <p>
+                                Feedback from users helped
+                                identify preferences around
+                                accessibility, audio feedback,
+                                customisation and the
+                                simplicity of the interface.
+                            </p>
+
+                        </article>
+
+
+                        <article class="evaluation-card">
+
+                            <h4>
+                                Usability Heuristics
+                            </h4>
+
+                            <p>
+                                Nielsen's usability heuristics
+                                provided a structured way to
+                                identify potential usability
+                                issues within the interface.
+                            </p>
+
+                        </article>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DESIGN EVOLUTION -->
+
+                <div class="design-subsection">
+
+                    <h3>
+                        Design Evolution
+                    </h3>
+
+                    <p>
+                        The findings from user feedback and
+                        heuristic evaluation informed the
+                        next stage of the design.
+
+                        The interface was refined before
+                        being implemented further in
+                        React Native.
+                    </p>
+
+
+                    <!-- ADD VERSION 1 / VERSION 2 / FINAL IMAGES HERE -->
+
+                    <div class="design-evolution">
+
+                        <figure>
+
+                            <img
+                                src="AaronAtaBaah.github.io\assets\images\running_app_portfolio_images\final-app\version 1 appliaction.jpg"
+                                alt="First version of the running application design"
+                            >
+
+                            <figcaption>
+                                Version 1 — Initial concept
+                            </figcaption>
+
+                        </figure>
+
+
+                        <figure>
+
+                            <img
+                                src="AaronAtaBaah.github.io\assets\images\running_app_portfolio_images\final-app\version 2 appliaction.jpg"
+                                alt="Refined version of the running application design"
+                            >
+
+                            <figcaption>
+                                Version 2 — Refined design
+                            </figcaption>
+
+                        </figure>
+
+
+                    </div>
+
+                </div>
 
 
             </section>
 
 
+
+            <!-- TECHNICAL IMPLEMENTATION -->
+
             <section>
 
-                <h2>Technical Implementation</h2>
+                <h2>
+                    Technical Implementation
+                </h2>
 
                 <p>
                     Explain how the application was built.
@@ -172,33 +538,49 @@
             </section>
 
 
+
+            <!-- CHALLENGES -->
+
             <section>
 
-                <h2>Challenges</h2>
+                <h2>
+                    Challenges
+                </h2>
 
                 <p>
-                    Explain something that didn't work as expected,
-                    what you discovered and how you responded.
+                    Explain something that didn't work as
+                    expected, what you discovered and how
+                    you responded.
                 </p>
 
             </section>
 
 
+
+            <!-- TESTING -->
+
             <section>
 
-                <h2>Testing and Feedback</h2>
+                <h2>
+                    Testing &amp; Feedback
+                </h2>
 
                 <p>
-                    Explain how you tested the application and
-                    what you learned.
+                    Explain how you tested the application
+                    and what you learned.
                 </p>
 
             </section>
 
 
+
+            <!-- OUTCOME -->
+
             <section>
 
-                <h2>Outcome</h2>
+                <h2>
+                    Outcome
+                </h2>
 
                 <p>
                     Explain what you ultimately produced.
@@ -207,13 +589,18 @@
             </section>
 
 
+
+            <!-- REFLECTION -->
+
             <section>
 
-                <h2>What I Would Improve</h2>
+                <h2>
+                    What I Would Improve
+                </h2>
 
                 <p>
-                    Explain what you would change if you continued
-                    developing the project.
+                    Explain what you would change if you
+                    continued developing the project.
                 </p>
 
             </section>
@@ -223,6 +610,9 @@
 
     </main>
 
+
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -240,5 +630,7 @@
 
     </footer>
 
+
 </body>
+
 </html>
