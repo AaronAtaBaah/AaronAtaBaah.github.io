@@ -49,3 +49,36 @@ nav {
     display: flex;
     gap: 2rem;
 }
+
+
+
+
+
+.prototype-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.project_image
+{
+     display: block;
+    max-width: 100%;
+    height: auto;
+
+}
+
+
+.design-evolution figure {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.design-evolution img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
