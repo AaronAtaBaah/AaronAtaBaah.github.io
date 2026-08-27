@@ -1,104 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <title>Aaron Ata Baah | Computer Science Graduate</title>
 
-  </head>
-  <body>
+<head>
 
-    <!-- HEADER -->
-    <header>
-      <div class="container">
-        <div><h1>Aaron Ata Baah</h1>
-          <p><strong>Computer Science Graduate</strong></p></div>
-        <div> <nav>
-            <a href="#Home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="assets/Aaron_Ata_Baah_CV.pdf" >Download CV</a> 
-            </a> </nav> </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+
+  <title>Aaron Ata Baah | Computer Science Graduate</title>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+         HEADER
+         ========================= -->
+
+  <header>
+
+    <div class="container">
+
+      <div class="site-title">
+
+        <h1>Aaron Ata Baah</h1>
+
+        <p>
+          Computer Science Graduate
+        </p>
+
       </div>
-    </header>
-    <main>
-      <section id="Hero"> </section>
-      <section id="Home">
-        <img class="profile-image" src="assets/images/profile.jpg.png"
-          alt="Aaron Ata-Baah">
-        <div>
-          <h2>Who am I ?</h2>
 
-          <p>
-            Interested in accessible software, data-driven applications,
-            and user-centred design.
+
+      <nav>
+
+        <a href="#Home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="assets/Aaron_Ata_Baah_CV.pdf">
+          Download CV
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+    <article class="homepage">
+
+
+      <!-- =========================
+                 HERO
+                 ========================= -->
+
+      <section id="Home">
+
+        <div class="home-intro">
+
+          <p class="eyebrow">
+            COMPUTER SCIENCE GRADUATE
           </p>
+
+          <h2>
+            Building, analysing and solving
+            problems with technology.
+          </h2>
+
+          <p class="hero-description">
+            I'm interested in software development,
+            data analysis and IT, with a focus on
+            building practical solutions and solving
+            real-world problems.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a href="#projects">
+              View Projects
+            </a>
+
+            <a href="assets/Aaron_Ata_Baah_CV.pdf">
+              Download CV
+            </a>
+
+          </div>
+
         </div>
+
+
+        <img class="profile-image" src="assets/images/profile.jpg.png" alt="Aaron Ata-Baah">
+
       </section>
 
-      <!-- ABOUT -->
+
+
+      <!-- =========================
+                 ABOUT
+                 ========================= -->
+
       <section id="about">
-        <h2>What have I built??</h2>
+
+        <h2>About Me</h2>
+
         <p>
-          Computer Science graduate interested in software development,
-          data analysis, and solving practical problems through technology.
+          I'm a Computer Science graduate with an
+          interest in software development, data
+          analysis and IT.
+        </p>
+
+        <p>
+          I worked on projects involving software
+          development, databases, data analysis and
+          user-centred design. My projects have given
+          me experience taking a problem from an
+          initial idea through research, development
+          and evaluation.
+        </p>
+
+        <p>
+          I'm currently looking for an entry-level
+          opportunity where I can apply my existing
+          skills while continuing to develop through
+          practical experience.
         </p>
 
       </section>
 
-      <!-- PROJECTS -->
+
+
+      <!-- =========================
+                 PROJECTS
+                 ========================= -->
+
       <section id="projects">
+
         <h2>Projects</h2>
 
-        <article>
-          <h3>Accessible Running Application</h3>
-          <p>
-            <strong>Problem:</strong>
-            Designed a prototype running application focused on improving
-            accessibility for runners through audio feedback and reduced
-            screen interaction.
-          </p>
-          <p>
-            <strong>Approach:</strong>
-            Collected user feedback and identified demand for customizable
-            audio guidance and reduced reliance on physical screen interaction
-            while running.
-          </p>
 
-          <p>
-            <strong>Outcome:</strong>
-            Produced a functional prototype supported by user testing and
-            technical documentation.
-          </p>
+        <div class="project-grid">
 
-          <p><strong>Tools:</strong>
-            React Native, Expo Speech, React Native Maps, Git
-          </p>
-          <p>
-            
-          <a href="projects/runningapp.html">View Project</a>
-            <!-- add the link to the code on it hub here -->
-            <a href="#">Demo</a>
-          </p>
-        </article>
+
+          <!-- RUNNING APPLICATION -->
+
+          <article class="project-card">
+
+            <p class="project-type">
+              MOBILE APPLICATION
+            </p>
+
+            <h3>
+              Accessible Running Application
+            </h3>
+
+            <p>
+              A React Native running application
+              designed to provide real-time pace
+              feedback while reducing reliance on
+              visual interaction.
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>React Native</span>
+
+              <span>GPS</span>
+
+              <span>Expo</span>
+
+            </div>
+
+
+            <a href="projects/runningapp.html">
+              View Project →
+            </a>
+
+          </article>
+
+
+          <!--
+                    ADD FUTURE PROJECTS HERE
+
+                    <article class="project-card">
+
+                        <p class="project-type">
+                            PROJECT TYPE
+                        </p>
+
+                        <h3>
+                            Project Name
+                        </h3>
+
+                        <p>
+                            Short description of the project.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Technology</span>
+                            <span>Technology</span>
+                        </div>
+
+                        <a href="projects/project-name.html">
+                            View Project →
+                        </a>
+
+                    </article>
+                    -->
+
+        </div>
+
       </section>
 
-    </main>
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <p>
-          <a href="https://github.com/AaronAtaBaah">GitHub</a> |
-          <a href="https://www.linkedin.com/">LinkedIn</a> |
-          <a href="mailto:aaronata.baah1+port@gmail.com">Email</a>
-        </p>
-      </div>
-    </footer>
 
-    <!-- css "move to style sheet -->
 
-  </body>
+      <!-- =========================
+                 SKILLS
+                 ========================= -->
+
+      <section id="skills">
+
+        <h2>Skills</h2>
+
+
+        <div class="skills-grid">
+
+
+          <article class="skill-group">
+
+            <h3>Programming</h3>
+
+            <p>
+              Python · Java · C++ · JavaScript
+            </p>
+
+          </article>
+
+
+          <article class="skill-group">
+
+            <h3>Web &amp; Mobile</h3>
+
+            <p>
+              HTML · CSS · React Native
+            </p>
+
+          </article>
+
+
+          <article class="skill-group">
+
+            <h3>Data &amp; Databases</h3>
+
+            <p>
+              SQL · Data Analysis · Data Cleaning
+            </p>
+
+          </article>
+
+
+          <article class="skill-group">
+
+            <h3>Tools</h3>
+
+            <p>
+              Git · GitHub · Microsoft Excel
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </section>
+
+
+    </article>
+
+  </main>
+
+
+
+  <!-- =========================
+         FOOTER
+         ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+
+        <a href="https://github.com/AaronAtaBaah">
+          GitHub
+        </a>
+
+        |
+
+        <a href="https://www.linkedin.com/">
+          LinkedIn
+        </a>
+
+        |
+
+        <a href="mailto:aaronata.baah1+port@gmail.com">
+          Email
+        </a>
+
+      </p>
+
+    </div>
+
+  </footer>
+
+
+</body>
 
 </html>

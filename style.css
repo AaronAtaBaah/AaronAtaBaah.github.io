@@ -1,58 +1,173 @@
-*{box-sizing : border-box}
+/* =================================
+   GLOBAL
+   ================================= */
 
-html{ scroll-behavior:smooth;}
+* {
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
 
-body{margin: 0 ;
-font-family :arai, sans-serif;
-color: #981818;
-line-height: 1.6;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    color: #080303;
 }
 
 
+/* =================================
+   TYPOGRAPHY
+   ================================= */
 
-.project-image {
-    width: 100%;
-    height: auto;
-    display: block;
+h1,
+h2,
+h3,
+h4 {
+    color: #222;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 
-.profile-image  {
-    width: 100px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    
-}
-#Home {display: flex;
-        align-items: center;
-    gap :2rem}
+/* =================================
+   CONTAINERS
+   ================================= */
 
-    main {
-    max-width: 1000px;
+.container,
+.homepage,
+.project-page {
+    width: min(1100px, calc(100% - 3rem));
     margin: 0 auto;
-    padding: 0 2rem;
-}
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+} margin: 0 auto;
+
+
+/* =================================
+   HEADER / NAVIGATION
+   ================================= */
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
 nav {
     display: flex;
     gap: 2rem;
 }
 
 
+/* =================================
+   HOME PAGE
+   ================================= */
+
+#Home {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+main > section {
+    margin-bottom: 5rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
 
+/* =================================
+   PROJECT PAGE
+   ================================= */
+
+.project-page > section {
+    margin-bottom: 4rem;
+}
+
+.project-page h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.project-page h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-page h3 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.project-page p {
+    max-width: 750px;
+}
+
+
+/* =================================
+   PROJECT HEADER
+   ================================= */
+
+.project-header {
+    padding: 4rem 0;
+}
+
+.project-header p {
+    font-size: 1.2rem;
+}
+
+
+/* =================================
+   PROJECT IMAGES
+   ================================= */
+
+.project-page img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.project-image {
+    width: 100%;
+}
 
 .prototype-image img {
     max-width: 100%;
@@ -60,15 +175,57 @@ nav {
 }
 
 
+/* =================================
+   PROJECT CARDS
+   ================================= */
 
-.project_image
-{
-     display: block;
-    max-width: 100%;
-    height: auto;
-
+.project-card {
+    max-width: 500px;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 16px;
 }
 
+.project-tags {
+    margin-bottom: 1.5rem;
+}
+
+.project-tags span {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin-right: 0.5rem;
+    border-radius: 20px;
+    background: #f2f2f2;
+    font-size: 0.85rem;
+}
+
+
+/* =================================
+   DESIGN GOALS
+   ================================= */
+
+.design-goals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.design-goal {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+
+/* =================================
+   DESIGN EVOLUTION
+   ================================= */
+
+.design-evolution {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 
 .design-evolution figure {
     flex: 1;
